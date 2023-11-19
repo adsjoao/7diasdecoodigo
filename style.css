@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+    padding: 10px 10px;
+    color: #2a5fcb;
+    text-decoration: none;
+    border-radius: 5px;
+    border: solid 1px #2a5fcb;
+}
+
+a:hover {
+    background-color:#ddecfc;
+    transition: 1s;
+}
