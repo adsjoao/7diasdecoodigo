@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia 2</title>
+</head>
+
+<body>
+
+
+
+    <form action="">
+        <div>
+            <label for="id_nome">Qual o seu nome?</label>
+            <input type="text" id="id_nome" placeholder="Digite seu nome">
+        </div>
+        <div>
+            <label for="id_idade">Quantos anos você tem?</label>
+            <input type="text" id="id_idade" placeholder="Digite sua idade">
+        </div>
+
+        <label for="curso">Escolha o curso:</label>
+        <select id="id_curso" name="curso">
+            <option value="1">HTML</option>
+            <option value="2">Python</option>
+            <option value="3">CSS</option>
+            <option value="4">Java</option>
+            <option value="5">React</option>
+        </select> <br>
+        <button onclick="calc()">Inserir</button>
+    </form>
+
+    <p><span id='id_dados'></span></p>
+
+    <script>
+        function calc() {
+            event.preventDefault();
+            let nome = document.getElementById('id_nome').value;
+            let idade = document.getElementById('id_idade').value;
+            let curso = document.getElementById('id_curso');
+            let cursoSelecionado = curso.options[curso.selectedIndex].text;
+
+            document.getElementById('id_dados').innerHTML = "Olá, " + nome + ". Você tem " + idade + " anos e já está aprendendo " + cursoSelecionado + ".";
+        }
+    </script>
+
+</body>
+
+</html>

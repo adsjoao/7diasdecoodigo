@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia 4</title>
+</head>
+
+<body>
+
+    <script>
+        let guess = prompt('Advinhe um número entre 0 e 10.');
+        let num = Math.floor(Math.random() * 11);
+        console.log(num);
+
+        if (guess == num) {
+            alert('Parabéns, você acertou!');
+        } else {
+            let c = 0;
+
+            while (c < 1) { 
+                c += 1;
+                alert(`Tentativa ${c}: Tente novamente, você tem mais uma tentativa.`);
+                guess = prompt('Advinhe um número entre 0 e 10.');
+
+                if (guess == num) {
+                    alert('Parabéns, você acertou!');
+                    break;
+                }
+            }
+
+            if (c === 1 && guess != num) {
+                alert(`Suas tentativas acabaram. O número era ${num}.`);
+            }
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

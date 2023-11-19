@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <metaname="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia 7</title>
+</head>
+
+<body>
+    <script>
+        function soma(n1,n2) {
+            return Number(n1) + Number(n2);
+        }
+
+        function subtracao(n1,n2) {
+            return Number(n1) - Number(n2);
+        }
+
+        function multiplicacao(n1,n2) {
+            return Number(n1) * Number(n2);
+        }
+
+        function divisao(n1,n2) {
+            return Number(n1) / Number(n2);
+        }
+
+        let n1;
+        let n2;
+        let conta = "";
+
+        do {
+
+            conta = prompt(`Qual operação você quer realizar? Responda 'soma', 'subtração', 'multiplicação', 'divisão' ou 'sair'.`);
+            while (conta != "soma" && conta != "subtração" && conta != "multiplicação" && conta != "divisão" && conta != "sair") {
+                alert(`Operação não reconhecida!`);
+                conta = prompt(`Qual operação você quer realizar? Responda 'soma', 'subtração', 'multiplicação', 'divisão' ou 'sair'.`);
+            }
+
+            if (conta === "sair") {
+                break;
+            }
+
+           n1 = prompt(`Insira o primeiro valor:`);
+           n2 = prompt(`Insira o segundo valor:`);
+            switch (conta) {
+                case 'soma':
+                    alert(`O resultado da ${conta} é ${soma(n1,n2)}`);
+                    break;
+                case 'subtração':
+                    alert(`O resultado da ${conta} é ${subtracao(n1,n2)}`);
+                    break;
+                case 'multiplicação':
+                    alert(`O resultado da ${conta} é ${multiplicacao(n1,n2)}`);
+                    break;
+                case 'divisão':
+                    if (n2 == 0) {
+                     alert('Valor inválido, digite outro número no "segundo valor"')
+                    }else {
+                        alert(`O resultado da ${conta} é ${divisao(n1,n2)}`);
+                    break;
+                }
+            }
+        } while (conta === "soma" || conta === "subtração" || conta === "multiplicação" || conta === "divisão")
+        alert(`Até a próxima!`);
+    </script>
+</body>
+
+</html>

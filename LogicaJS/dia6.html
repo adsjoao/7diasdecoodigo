@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia 6</title>
+</head>
+
+<body>
+    <div id="output"></div>
+
+    <script>
+        let frutas = [];
+        let bebidas = [];
+        let congelados = [];
+        let comida = [];
+        let limpeza = [];
+        let produtos = "";
+        let categoria = "";
+        let remover = "";
+
+        let outputDiv = document.getElementById('output');
+
+        let add = "sim";
+        while (add.toLowerCase() !== "não") {
+            add = prompt("Você deseja adicionar um produto na lista de compras? Responda 'sim', 'não' ou 'remover'.").toLowerCase();
+
+            if (add === "não") {
+                break;
+            } else if (add === "remover") {
+                if (frutas.length === 0 && bebidas.length === 0 && comida.length === 0 && congelados.length === 0 && limpeza.length === 0) {
+                    alert(`A lista está vazia!`);
+                } else {
+                    remover = prompt(`Lista de compras:\n  Frutas: ${frutas}\n  Bebidas: ${bebidas}\n  Comida: ${comida}\n  Congelados: ${congelados}\n Limpeza: ${limpeza}\n\nQual produto você deseja remover?`);
+                    if (frutas.indexOf(remover) !== -1) {
+                        frutas.splice(frutas.indexOf(remover), 1);
+                        alert(`O item ${remover} foi removido com sucesso!`);
+                    } else if (bebidas.indexOf(remover) !== -1) {
+                        bebidas.splice(bebidas.indexOf(remover), 1);
+                        alert(`O item ${remover} foi removido com sucesso!`);
+                    } else if (comida.indexOf(remover) !== -1) {
+                        comida.splice(comida.indexOf(remover), 1);
+                        alert(`O item ${remover} foi removido com sucesso!`);
+                    } else if (congelados.indexOf(remover) !== -1) {
+                        congelados.splice(congelados.indexOf(remover), 1);
+                        alert(`O item ${remover} foi removido com sucesso!`);
+                    } else if (limpeza.indexOf(remover) !== -1) {
+                        limpeza.splice(limpeza.indexOf(remover), 1);
+                        alert(`O item ${remover} foi removido com sucesso!`);
+                    } else {
+                        alert(`Não foi possível encontrar o item dentro da lista!`);
+                    }
+                }
+            } else if (add === "sim") {
+                produtos = prompt("Qual produto você deseja inserir?");
+                categoria = prompt("Em qual categoria esse produto se encaixa: 'frutas', 'bebidas', 'comida','congelados' ou 'limpeza'?").toLowerCase();
+                if (categoria === 'frutas') {
+                    frutas.push(produtos);
+                } else if (categoria === 'bebidas') {
+                    bebidas.push(produtos);
+                } else if (categoria === 'comida') {
+                    comida.push(produtos);
+                } else if (categoria === 'congelados') {
+                    congelados.push(produtos);
+                } else if (categoria === 'limpeza') {
+                    limpeza.push(produtos);
+                } else {
+                    alert("Essa categoria não foi pré-definida.");
+                }
+            }
+
+            alert(`Lista de compras:\n  Frutas: ${frutas}\n  Bebidas: ${bebidas}\n  Limpeza: ${limpeza}\n  Congelados: ${congelados}\n Comidas: ${comida}`);
+        }
+
+        console.log('Frutas:', frutas, 'Bebidas:', bebidas, 'Limpeza:', limpeza, 'Congelados:', congelados, 'Comida:', comida)
+
+        outputDiv.innerHTML = `Frutas: ${frutas.join(', ')}<br>
+                              Bebidas: ${bebidas.join(', ')}<br>
+                              Limpeza: ${limpeza.join(', ')}<br>
+                              Congelados: ${congelados.join(', ')}<br>
+                              Comida: ${comida.join(', ')}`;
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia 3</title>
+</head>
+
+<body>
+
+    <script>
+        let area = prompt('Digite "1" para Front-end ou digite "2" para Back-end');
+        let tech;
+
+        if (area == 1) {
+            tech = prompt('Digite "1" para aprender React ou digite "2" para aprender Vue');
+
+            if (tech == 1) {
+                alert('React');
+            } else {
+                alert('Vue');
+            }
+        } else {
+            tech = prompt('Digite "1" para aprender C# ou digite "2" para aprender Java');
+
+            if (tech == 1) {
+                alert('C#');
+            } else {
+                alert('Java');
+            }
+        }
+
+        let escolha = prompt('Você quer se especializar em uma área escolhida ou se tornar um desenvolvedor Fullstack?');
+        let c = 0;
+        while (c < 50) {
+            c += 1;
+            let outraTech = prompt(`${c} - Quais outras tecnologias gostaria de se especializar?`);
+        }
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
