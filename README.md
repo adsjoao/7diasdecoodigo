@@ -1,4 +1,4 @@
 # 7diasdecoodigo
-João Paulo da Silva Rocha
-Wellington Ribeiro
-Lucas Junio
+João Paulo da Silva Rocha <br>
+Wellington Ribeiro <br>
+Lucas Junio <br>
